@@ -1,0 +1,49 @@
+\documentclass{style/nsf}
+
+\graphicspath{{figures/}}
+
+\begin{document}
+
+% A. Cover Sheet
+% A number of the boxes contained on the Cover Sheet are% electronically pre-filled as part of the FastLane login process
+% Complete the rest of your info there
+
+% B. Project Summary
+\title{Put your proposal title here}
+\newsection{B}
+\input{sections/summary}
+
+% C. Table of Contents 
+% A Table of Contents is automatically generated for the proposal by FastLane
+
+% D. Project Description
+\newpage\newsection{D}
+\input{sections/description}
+
+% E. References Cited
+\newpage\newsection{E}
+\renewcommand\refname{References Cited}
+\bibliography{sections/references}
+
+% F. Biographical Sketch(es)
+\newpage\newsection{F}
+\input{sections/bio}
+
+% G. Budget Justification
+\newpage\newsection{G}
+\input{sections/budget}
+
+%  H. Current and Pending Support
+\newpage\newsection{H}
+\input{sections/support}
+
+% I. Facilities, Equipment and Other Resources
+\newpage\newsection{I}
+\input{sections/resources}
+
+% J. Special Information and Supplementary Documentation
+\newpage\newsection{J}
+\input{sections/data}		% Data Management Plan (Required)
+%\input{sections/postdoc} % Postdoctoral Researcher Mentoring Plan (if applicable)
+
+\end{document}
