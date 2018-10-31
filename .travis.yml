@@ -1,0 +1,11 @@
+before_install:
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends latexmk
+script:
+- latexmk -pdf -c -silent nsf.tex
+deploy:
+  provider: releases
+  api_key:
+    secure: ebHVnn5fwJZ32s79Df099gM5nsF9QJ/KMpQbBEJo4kwRqDEW6dP0f28MrkJSdq337oOI6/uIdvB+Umko0uZ4wMxyX5NyXXfC4H1FZ+0OpdS+ksueguatAP3Wvhng3bse8UBxeMKekQNwRlK3MS+igLOQJrSxyyzchXgj+vWwm4TiheTIY/0I1JrQv/B/VW5EusVDl6WZosc1q2XF0qhtBT5ytHwVTZN9/4KwtFA8e2dyuX+aHyJdfTjSpXkByJtgBepHdAQ4dL3ZyYifBLChSfYoQlbzxwbl0kNTmsnnvcjO4rqjGwBbZrGufgIigr+w9klMzih/90TRo6MFRQo2vc2wUHhSYmAGc2H+RQjR2gPAsHrHizotJg4mWq/KhXGoT1jp5reKfwKnq4giQ0TWI6eE14y1IDDPygQuQNCY6b7UNdbCLhBfEnjdMmDvOhuyx2FmsP2czeDmlL1U99bwz2AcbWTo/AkiW0b4tzQ+Eml8esPOdSu5Fgf9mcdzfirqYCtbzXxxsJXLXdzJNbfOD8N99xdK/kqNcDaIPM+rBSNTsuGk66k+m+QCIGznAG5goCnbD9RU0T2NT/qewi7LLEV31/KaKVoGzULjxhwLmcbBHxsxGBGNTt+6fJLxTUEfce3G6t8PAv2BeCw5Z1MQ/gw9AWwp6tcnLJXfmcM5rB4=
+  file: nsf.pdf
+  skip_cleanup: true
+  overwrite: true
